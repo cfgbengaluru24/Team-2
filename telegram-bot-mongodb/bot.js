@@ -17,7 +17,7 @@ connectToDatabase().then(db => {
         // Initialize or reset user data
         await usersCollection.updateOne(
             { chat_id: chatId },
-            { $set: { image_path: '',  location: '', name: '',  step: 'name'} },
+            { $set: { image_path: '', location: '', name: '', step: 'name' } },
             { upsert: true }
         );
 
@@ -43,9 +43,6 @@ connectToDatabase().then(db => {
                 { $set: { name: text, step: 'photo' } }
             );
             bot.sendMessage(chatId, 'Thank you for providing your name. Now, please send me an image.');
-        } else if (user.step === 'photo') {
-            // Handle photo
-            bot.sendMessage(chatId, 'Please send me an image.');
         } else if (user.step === 'location') {
             // Handle location
             const locationRegex = /^-?\d+\.\d+,-?\d+\.\d+$/;
@@ -58,7 +55,7 @@ connectToDatabase().then(db => {
                 bot.sendMessage(chatId, 'Thank you! We have received your name, image, and location. We will get back to you soon with further updates.');
 
                 // Optionally save user data to a file or database here
-                const userData = `Name: ${user.name}\nLocation: ${user.location}\nImage Path: ${user.photo_path}\n`;
+                const userData = `Name: ${user.name}\nLocation: ${user.location}\nImage Path: ${user.image_path}\n`;
                 fs.writeFileSync(path.join(__dirname, `${chatId}_info.txt`), userData);
             } else {
                 bot.sendMessage(chatId, 'Please provide a valid location in the format "latitude,longitude".');
@@ -68,7 +65,7 @@ connectToDatabase().then(db => {
         }
     });
 
-    bot.on('image', async (msg) => {
+    bot.on('photo', async (msg) => {
         const chatId = msg.chat.id;
         const fileId = msg.photo[msg.photo.length - 1].file_id;
 
