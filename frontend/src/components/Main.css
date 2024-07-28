@@ -1,0 +1,37 @@
+.w3-sidebar a {
+    font-family: "Sans-serif", sans-serif;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .w3-wide {
+    font-family: "Montserrat", sans-serif;
+  }
+  #login_btn{
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+
+  }
+  #login_btn:hover{
+    background-color: aqua;
+  }
+  #body_img{
+
+    height: 85vh;
+    width:100%;
+  }
+
+
+
+
+
+
+
+
+  
