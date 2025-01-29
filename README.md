@@ -42,3 +42,4 @@ https://drive.google.com/file/d/100M6vXINFmS0e9Dwn7lRJdvjZwGKySid/view?usp=shari
 🌱 Let's work together to conserve and restore the forests! 🌿
 
 *This project was developed during the Code for Good hackathon.*
+ <br /> <br /> The code ("Code") in this repository was created solely by the student teams during a coding competition hosted by JPMorgan Chase Bank, N.A. ("JPMC"). JPMC did not create or contribute to the development of the Code. This Code is provided AS IS and JPMC makes no warranty of any kind, express or implied, as to the Code, including but not limited to, merchantability, satisfactory quality, non-infringement, title or fitness for a particular purpose or use.
